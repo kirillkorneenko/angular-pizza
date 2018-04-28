@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  registrationFlag = false;
 
-  public clicRegistration() {
-    this.registrationFlag = !this.registrationFlag;
+  public windowOpen() {
+    document.getElementById('modal-shadow').style.display = 'block';
+    document.getElementById('modal-window').style.display = 'block';
   }
+
+  public windowClose() {
+    document.getElementById('modal-shadow').style.display = 'none';
+    document.getElementById('modal-window').style.display = 'none';
+  }
+
+
 }

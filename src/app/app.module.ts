@@ -3,14 +3,27 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import {RouterModule} from '@angular/router';
+import { SaucesComponent } from './sauces/sauces.component';
+
+const routes = [
+  {path: '', component: HomePageComponent},
+  {path: 'about-us', component: AboutUsComponent}
+];
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    AboutUsComponent,
+    SaucesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

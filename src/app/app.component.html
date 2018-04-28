@@ -1,52 +1,33 @@
-<h1 class="h1red">О нас</h1>
-<div class="small">
-
-  <article>
-    <div>
-      <div id="text"><img src="../assets/image/people1.jpg" class="people" alt="people">
-        <p>Pizza Vesuvio - один из первопроходцев в Европе по доставке
-          пиццы на дом. Первая пиццерия была открыта как семейный
-          бизнес в 1987 году в Мадриде. Акцент на инновации и
-          качество продукции привлекли внимание огромной аудитории,
-          что позволило в 1992 году начать расширение
-          на международный рынок.<br><br></p>
-        <p>Главный секрет нашей пиццы - тесто, изготовленное по собственной
-          рецептуре, которое не подвергается заморозке, что позволяет
-          сохранить свежесть и натуральный вкус пиццы, а также
-          профессиональный подход к выбору высококачественных ингредиентов и разработке уникальных рецептур приготовления.
-          Постоянные инновации, любовь к своему делу и внимательное отношение к пожеланиям каждого гостя способствовали устойчивому
-          росту популярности и включению компании в рейтинг одной из крупнейших в мире по доставке пиццы. На сегодняшний день
-          Pizza Vesuvio представлена в 21 стране, на трех разных континентах и продолжает уверенную экспансию по всему миру.</p>
+<div class="headr">
+  <header>
+    <div class="fix">
+      <img src="assets/image/emblema.jpg" alt="cap">
+      <div class="name">
+        <p class="pizza">PIZZA</p>
+        <p class="vesuvio"> Vesuvio</p>
       </div>
-      <div id="history">История Pizza Vesuvio в Беларуси</div>
-      <div class="onediv">
-        <div class="circle">2017</div>
-        <div class="citx">
-          В феврале компания Pizza Vesuvio получила награду - золотую звезду Мишлен. Наша команда растет и развивается вместе с Вами!
-          Количество сотрудников в 2017 году достигло 300 человек. Мы объявили о запуске собственной производственной линии изготовления соусов и морсов.
-        </div>
-      </div>
-      <div class="onediv">
-        <div class="circle">2016</div>
-        <div class="citx">
-          2016 год: компания Pizza Vesuvio признана Лучшим поставщиком года на международной премии Best Food Award. Награда такого типа и класса в России была получена впервые. В этом году количество ресторанов достигло рекордной цифры - 14.
-        </div>
-      </div>
-      <div class="onediv">
-        <div class="circle">2014</div>
-        <div class="citx">
-          Pizza Vesuvio доставляет свыше 4 000 заказов самого разного объема и сложности по всему Санкт-Петербургу и области. Мы разработали 20 собственных рецептур, позволяющих решать самые разнообразные задачи.
-        </div>
-      </div>
-      <div class="onediv">
-        <div class="circle">2010</div>
-        <div class="citx">
-          2010 год: Pizza Vesuvio открывает первый ресторан в Санкт-Петербурге.
-          Pizza Vesuvio даёт возможность экспериментировать и помогает реализовать себя молодым специалистам. За первый год работы открылось 4 ресторана и было нанято 50 сотрудников. Ежегодно проводит Международный архитектурный конкурс «Офисное пространство: креатив, технологии, инновации».
-        </div>
-      </div>
+      <ul class="menu-main">
+        <li><a href="" class="current">Пицца</a></li>
+        <li><a href="" class="current">Соусы</a></li>
+        <li><a href="drinks.html" class="current">Напитки</a></li>
+        <li><a href="" class="current">Рестораны</a></li>
+        <li><a routerLink="about-us" class="current">О нас</a></li>
+      </ul>
+      <div class="enter"><a href="#zatemnenie" class="registration">Вход/Регистрация</a></div>
     </div>
-  </article>
+  </header>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+<div class="foot">
+  <footer>
+    <div class="cop"><p class="pp">&copy;2018 by Dream Team<br>
+      Privacy Policy</p>
+    </div>
+  </footer>
 </div>
 
 <div id="zatemnenie">
@@ -66,7 +47,6 @@
   </div>
 </div>
 
-
 <div id="modal-shadow" class="modal-shadow"></div>
 <div id="modal-window" class="modal-window">
   <form action="" class="ui-form">
@@ -85,5 +65,6 @@
     </div>
     <p><input type="submit" value="Зарегистрироваться" ></p>
     <p><input type="submit" value="Вернуться ко входу на сайт" onclick="windowClose()"></p>
+
   </form>
 </div>
