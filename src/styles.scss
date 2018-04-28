@@ -129,9 +129,8 @@ legend{
   margin: 0;
   text-align: center;
   height: 40px;
-  /* left: 100px; */
   top: 60px;
-  width: 500px;
+
 }
 
 li{
@@ -165,6 +164,7 @@ a.current:hover{
   top:10px;
   width: 150px;
   text-decoration:none;
+  height: 30px;
 }
 
 .registration{
@@ -172,6 +172,7 @@ a.current:hover{
   text-decoration:none;
   font:bold 14px Arial;
   color:#666;
+
 }
 .registration:hover{
   color:#fff;
