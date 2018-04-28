@@ -20,13 +20,14 @@ header{
   background-color: #FAEBD7;
   width: 70%;
   margin-bottom: 160px;
-
+  z-index: 50;
   /*border-radius: 7px;*/
 }
+
 .headr{
   display: flex;
   justify-content: center;
-  z-index: 5;
+  z-index: 50;
 }
 
 .foot{

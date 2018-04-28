@@ -10,7 +10,8 @@ import { SaucesComponent } from './sauces/sauces.component';
 
 const routes = [
   {path: '', component: HomePageComponent},
-  {path: 'about-us', component: AboutUsComponent}
+  {path: 'about-us', component: AboutUsComponent},
+  {path: 'sauces', component: SaucesComponent}
 ];
 
 
