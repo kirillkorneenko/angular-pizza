@@ -3,28 +3,42 @@
   <article>
 
     <div class="card">
+      <div *ngFor="let pizza of data">
       <div class="cardo" data-item="0" data-id="786584dc-a255-4da5-a020-1c58917d903e">
+
         <a class="photocard w-inline-block">
-          <img src="assets/image/пицца_Гавайская.jpg">
+          <img src="assets/image/{{pizza.urlImg}}">
         </a>
+
         <div class="cardopis">
+
           <div class="titcard">
-            <div class="cardzago">Пицца Гавайская </div>
+            <div class="cardzago">Пицца {{pizza.name}} </div>
           </div>
-          <div class="opiscard"><b>Состав:</b>  Фирменный томатный соус, ветчина, ананасы, сыр моцарелла</div>
+
+          <div class="opiscard"><b>Состав:</b>
+            <div *ngFor="let ingredient of pizza.ingredients">
+              {{ingredient.name}}
+            </div>
+          </div>
+
           <div class="select_size">
             <select>
             <option>23 см</option>
             <option>30 см</option>
           </select></div>
-          <div class="opiscard"><b>Калорийность:</b> 500 ккал</div>
+
+          <div class="opiscard"><b>Калорийность:</b> {{pizza.caloricity}}</div>
+
           <div class="cardprice w-clearfix">
-            <div class="priceca">20 р.</div>
+            <div class="priceca">{{pizza.price}}</div>
           </div>
+
           <div><input type="button" name="box" class="box" value="В корзину"></div>
+
         </div>
       </div>
-
+      </div>
     </div>
   </article>
 </div>

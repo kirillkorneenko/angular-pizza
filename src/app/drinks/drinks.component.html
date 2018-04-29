@@ -2,20 +2,22 @@
 <div class="small">
   <article>
     <div class="card">
+      <div *ngFor="let drink of data">
       <div class="cardo" data-item="0" data-id="786584dc-a255-4da5-a020-1c58917d903e">
         <a class="photocard w-inline-block">
-          <img src="assets/image/сок1.jpg">
+          <img src="assets/image/{{drink.urlImg}}">
         </a>
         <div class="cardopis">
           <div class="titcard">
-            <div class="cardzago">Сок «Сочная долина» 0,5 л.</div>
+            <div class="cardzago">{{drink.name}}</div>
           </div>
-          <div class="opiscard">Напиток безалкогольный Сок «Сочная долина» персиковый</div>
+          <div class="opiscard">{{drink.description}}</div>
           <div class="cardprice w-clearfix">
-            <div class="priceca">1.20 р.</div>
+            <div class="priceca">{{drink.price}}</div>
           </div>
           <div><input type="button" name="box" class="box" value="В корзину"></div>
         </div>
+      </div>
       </div>
     </div>
   </article>

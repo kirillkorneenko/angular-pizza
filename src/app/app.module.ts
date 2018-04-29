@@ -11,6 +11,10 @@ import { DrinksComponent } from './drinks/drinks.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { EnterComponent } from './enter/enter.component';
+import {HttpClientModule} from '@angular/common/http';
+import {SaucesService} from '../services/sauce/sauces.service';
+import {DrinksService} from '../services/drinks/drinks.service';
+import {PizzaService} from '../services/pizza/pizza.service';
 
 const routes = [
   {path: 'home', component: HomePageComponent},
@@ -19,7 +23,8 @@ const routes = [
   {path: 'drinks', component: DrinksComponent},
   {path: 'pizza', component: PizzaComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'enter', component: EnterComponent}
+  {path: 'enter', component: EnterComponent},
+  {path: 'contacts', component: ContactsComponent}
 ];
 
 
@@ -36,9 +41,14 @@ const routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    HttpClientModule,
+    RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    SaucesService,
+    DrinksService,
+    PizzaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
