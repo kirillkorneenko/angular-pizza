@@ -4,38 +4,38 @@
 }
 
 
-  .cartlist {
-    border-width: 1px;
-  }
+.cartlist {
+  border-width: 1px;
+}
 
-    .cartlist {
-      margin-right: 10px;
-      margin-bottom: 20px;
-      margin-left: 10px;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-box-align: stretch;
-      -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch;
-    }
-    .cartlist {
-      display: block;
-      margin: 10px 10px 30px;
-      padding: 0 0px 30px;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: stretch;
-      -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      background-color: #fff;
-      font-size: 18px;
-      line-height: 24px;
-    }
+.cartlist {
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.cartlist {
+  display: block;
+  margin: 10px 10px 30px;
+  padding: 0 0px 30px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  background-color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+}
 .authorization-content {
   max-width: 100%;
 }
@@ -53,14 +53,14 @@
 }
 
 
-  .akcotitle {
-    margin-bottom: 10px;
-    color: #A0522D;
-    font-size: 25px;
-    line-height: 28px;
-    font-weight: 700;
-    font-weight: bold;
-  }
+.akcotitle {
+  margin-bottom: 10px;
+  color: #A0522D;
+  font-size: 25px;
+  line-height: 28px;
+  font-weight: 700;
+  font-weight: bold;
+}
 
 .form-pop-up-window {
   padding-top: 10px;
@@ -127,7 +127,7 @@ button, input, optgroup, select, textarea {
   margin: 0;
 }
 
- input[type="submit"] {
+input[type="submit"] {
   width: 100%;
   padding: 0;
   line-height: 42px;
@@ -161,7 +161,7 @@ input.w-button {
   padding: 10px 15px;
   border-radius: 5px;
   background-color: transparent;
- /* background-image: url(../images/button.png);*/
+  /* background-image: url(../images/button.png);*/
   background-position: 50% 50%;
   background-size: auto 32px;
   background-repeat: no-repeat;

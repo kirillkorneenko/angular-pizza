@@ -15,6 +15,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {SaucesService} from '../services/sauce/sauces.service';
 import {DrinksService} from '../services/drinks/drinks.service';
 import {PizzaService} from '../services/pizza/pizza.service';
+import { OrderComponent } from './order/order.component';
 
 const routes = [
   {path: 'home', component: HomePageComponent},
@@ -24,7 +25,8 @@ const routes = [
   {path: 'pizza', component: PizzaComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'enter', component: EnterComponent},
-  {path: 'contacts', component: ContactsComponent}
+  {path: 'contacts', component: ContactsComponent},
+  {path: 'order', component: OrderComponent}
 ];
 
 
@@ -37,7 +39,8 @@ const routes = [
     DrinksComponent,
     PizzaComponent,
     ContactsComponent,
-    EnterComponent
+    EnterComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

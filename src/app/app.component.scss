@@ -1,5 +1,178 @@
-.basket{
-  justify-content: right;
-  width: 20%;
-  height: 10%;
+aside{
+  display: flex;
+  background-color: #FFE4B5;
+  width: 300px;
+  float: right;
+  z-index: 40;
+  position: relative;
+  top:75px;
+  right: 305px;
+  border-radius: 10px;
+  padding: 10px;
 }
+
+.cost{
+  position: relative;
+  top:50px;
+}
+
+
+.product{
+  background-color: #FAEBD7;
+  padding: 10px;
+  border: 3px solid #ebecec;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.cardzago{
+  font-size: 26px;
+  color:#8B7355;
+  font-weight: bold;
+}
+
+.pr_name, .pr_size{
+  font-size: 20px;
+}
+
+.pr_size{
+  margin-bottom: 10px;
+}
+.pr_name{
+  font-weight: bold;
+}
+
+.pr_delete{
+  list-style: none;
+  text-decoration:none;
+  color:#A0522D;
+  font-size: 18px;
+}
+
+#pr_delete{
+  margin-top: 10px;
+}
+
+.b-inp-num__dec {
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  left: 0;
+}
+.b-inp-num__dec, .b-inp-num__inc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 29px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  color: #555451;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.b-inp-num {
+  display: inline-block;
+  position: relative;
+  width: 91px;
+  height: 28px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  border: solid 1px #b2ac99;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eaeaea), color-stop(1, #fff));
+  background-image: -webkit-linear-gradient(bottom, #eaeaea 0%, #fff 100%);
+  background-image: -moz-linear-gradient(bottom, #eaeaea 0%, #fff 100%);
+  background-image: -o-linear-gradient(bottom, #eaeaea 0%, #fff 100%);
+  background-image: -ms-linear-gradient(bottom, #eaeaea 0%, #fff 100%);
+  background-image: linear-gradient(bottom, #eaeaea 0%, #fff 100%);
+
+}
+
+.b-inp-num__input {
+  width: 28px;
+  padding: 5px 5px 0;
+  margin: -1px 0 0 29px;
+  text-align: center;
+  vertical-align: top;
+  height: 28px;
+  line-height: 20px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: inset 1px 1px 3px #b8b8b8;
+  box-shadow: inset 1px 1px 3px #b8b8b8;
+  border: solid 1px #b2ac99;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #efefef), color-stop(1, #fefefe));
+  background-image: -webkit-linear-gradient(top, #efefef 0%, #fefefe 100%);
+  background-image: -moz-linear-gradient(top, #efefef 0%, #fefefe 100%);
+  background-image: -o-linear-gradient(top, #efefef 0%, #fefefe 100%);
+  background-image: -ms-linear-gradient(top, #efefef 0%, #fefefe 100%);
+  background-image: linear-gradient(top, #efefef 0%, #fefefe 100%);
+}
+
+.b-inp-num__inc {
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  right: 0;
+}
+.b-inp-num__dec, .b-inp-num__inc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 29px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 30px;
+  color: #555451;
+  text-shadow: 1px 1px 1px #fff;
+}
+.b-inp-num__inc:before {
+  content: "+";
+  left: 1px;
+}
+.b-inp-num__dec:before, .b-inp-num__inc:before {
+  position: relative;
+  top: -2px;
+}
+.b-inp-num__dec::before {
+  content: "−";
+}
+
+.rub{
+  margin-top: 10px;
+  font-size: 18px;
+}
+.opiscard{
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.total_cost{
+  font-size: 22px;
+  color:#8B7355;
+  font-weight: bold;
+}
+
+.advertising{
+  background-color: #FAEBD7;
+  padding: 10px;
+  border: 3px solid #ebecec;
+  border-radius: 16px;
+  background-color: #fff;
+  /*background-image:url(assets/image/pepsi1.jpg);*/
+}
+
+.order {
+  width: 100%;
+  padding: 0;
+  line-height: 42px;
+  background: #DEB887;
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+
+
