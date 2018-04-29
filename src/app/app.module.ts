@@ -10,6 +10,7 @@ import { SaucesComponent } from './sauces/sauces.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { EnterComponent } from './enter/enter.component';
 
 const routes = [
   {path: 'home', component: HomePageComponent},
@@ -18,6 +19,7 @@ const routes = [
   {path: 'drinks', component: DrinksComponent},
   {path: 'pizza', component: PizzaComponent},
   {path: 'contacts', component: ContactsComponent},
+  {path: 'enter', component: EnterComponent}
 ];
 
 
@@ -29,7 +31,8 @@ const routes = [
     SaucesComponent,
     DrinksComponent,
     PizzaComponent,
-    ContactsComponent
+    ContactsComponent,
+    EnterComponent
   ],
   imports: [
     BrowserModule,
