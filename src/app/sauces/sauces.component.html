@@ -10,7 +10,7 @@
             <img src="assets/image/{{sauce.urlImg}}">
 
           </a>
-          <div class="cardopis">
+                    <div class="cardopis">
             <div class="titcard">
               <div class="cardzago"> {{sauce.name}}</div>
             </div>
@@ -18,7 +18,7 @@
             <div class="cardprice w-clearfix">
               <div class="priceca">{{sauce.price}}</div>
             </div>
-            <div><input type="button" name="box" class="box" value="В корзину"></div>
+            <div><input (click)="addToBasket(sauce)" type="button" name="box" class="box" value="В корзину"></div>
           </div>
         </div>
       </div>

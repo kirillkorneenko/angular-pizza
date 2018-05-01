@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DrinksService} from '../../services/drinks/drinks.service';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-drinks',
@@ -10,7 +11,7 @@ export class DrinksComponent implements OnInit {
 
   data: Array<any>;
 
-  constructor(private drinksService: DrinksService) { }
+  constructor(private drinksService: DrinksService,  private appComponent: AppComponent) { }
 
   ngOnInit() {
     this.getAll();
@@ -22,6 +23,19 @@ export class DrinksComponent implements OnInit {
         this.data = res;
       }
     );
+  }
+
+  public addToBasket(drink) {
+    const drinkOut = {
+      uuid: Date.now(),
+      id: '',
+      name: '',
+      price: ''
+    };
+    drinkOut.id = drink.id;
+    drinkOut.name = drink.name;
+    drinkOut.price = drink.price;
+    this.appComponent.addDrinks(drinkOut);
   }
 
 }

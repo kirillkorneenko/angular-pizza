@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SaucesService} from '../../services/sauce/sauces.service';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-sauces',
@@ -18,7 +19,7 @@ export class SaucesComponent implements OnInit {
 //   price: null
 // };
 
-  constructor(private saucesService: SaucesService) { }
+  constructor(private saucesService: SaucesService,  private appComponent: AppComponent) { }
 
   ngOnInit() {
     this.getAll();
@@ -30,5 +31,18 @@ export class SaucesComponent implements OnInit {
       this.data = res;
     }
     );
+  }
+
+  public addToBasket(sauce) {
+    const sauceOut = {
+      uuid: Date.now(),
+      id: '',
+      name: '',
+      price: ''
+    };
+    sauceOut.id = sauce.id;
+    sauceOut.name = sauce.name;
+    sauceOut.price = sauce.price;
+    this.appComponent.addSauce(sauceOut);
   }
 }

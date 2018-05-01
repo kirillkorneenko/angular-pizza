@@ -25,27 +25,79 @@
     <!--<div *ngFor="let drink of data">-->
       <div class="cardo" data-item="0" data-id="786584dc-a255-4da5-a020-1c58917d903e">
 
-        <div class="cardopis">
+        <div  class="cardopis">
          <div class="cardzago">Ваш заказ:</div>
-          <div class="product">
-           <!-- <div class="pr_name">Гавайская</div>-->
-            <!--<div class="pr_size">Традиция 23см</div>
+
+
+
+              <div *ngFor="let pizza of pizzaList">
+                <div class="product">
+            <div class="pr_name">{{pizza.name}}</div>
+            <div class="pr_size">{{pizza.size.size}}</div>
+              <div class="pr_size">{{pizza.pastry}}</div>
             <div>
-            <span class="b-inp-num">
-              <b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>
-              <input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">
-              <b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>
-            <div class="rub">6 руб. </div>
+            <!--<span class="b-inp-num">-->
+            <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
+            <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
+            <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
+            <div class="rub">{{pizza.price}} </div>
+            </div>
+            <div>
+              <button (click)="deletePizza(pizza)" type="button" class="pr_delete">Удалить</button>
+            </div>
               </div>
-            <div id="pr_delete"><a href=" " class="pr_delete">Удалить</a></div>-->
-          </div>
+            </div>
+
+              <div *ngFor="let sauce of sauceList">
+                <div class="product">
+                <div class="pr_name">{{sauce.name}}</div>
+                <div>
+                  <!--<span class="b-inp-num">-->
+                  <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
+                  <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
+                  <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
+                  <div class="rub">{{sauce.price}} </div>
+                </div>
+                <div><button (click)="deleteSauce(sauce)" class="pr_delete">Удалить</button></div>
+                </div>
+              </div>
+
+              <div *ngFor="let drinks of drinksList">
+                <div class="product">
+                <div class="pr_name">{{drinks.name}}</div>
+                <div>
+                  <!--<span class="b-inp-num">-->
+                  <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
+                  <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
+                  <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
+                  <div class="rub">{{drinks.price}} </div>
+                </div>
+                <div>
+                  <button (click)="deleteDrinks(drinks)" class="pr_delete">Удалить</button>
+                </div>
+                </div>
+              </div>
+
+          <!--<div class="product">-->
+           <!--<div class="pr_name">Гавайская</div>-->
+            <!--<div class="pr_size">Традиция 23см</div>-->
+            <!--<div>-->
+            <!--<span class="b-inp-num">-->
+              <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
+              <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
+              <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
+            <!--<div class="rub">6 руб. </div>-->
+              <!--</div>-->
+            <!--<div id="pr_delete"><a href=" " class="pr_delete">Удалить</a></div>-->
+          <!--</div>-->
+
           <div class="opiscard"><div class="total_cost">Общая стоимость:</div>  0 руб.</div>
           <div class="advertising" >
             <b>Возьмите к пицце<br> напитки</b>
-            <input type="button" name="adv_drink" class="adv_drink" value="Выбрать напитки" onclick="location.href='drinks'">
+            <input type="button" name="adv_drink" class="adv_drink" value="Выбрать напитки" routerLink="drinks">
 
           </div>
-          <div><input type="button" name="order" class="order" value="Оформить заказ" onclick="location.href='order'"></div>
+          <div><input type="button" name="order" class="order" value="Оформить заказ" routerLink="order"></div>
         </div>
       </div>
     </div>

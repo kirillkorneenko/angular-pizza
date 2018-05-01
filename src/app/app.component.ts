@@ -7,14 +7,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public windowOpen() {
-    document.getElementById('modal-shadow').style.display = 'block';
-    document.getElementById('modal-window').style.display = 'block';
+
+  pizzaList = [];
+  sauceList = new Array<any> ();
+  drinksList = new Array<any> ();
+
+  constructor() {}
+
+  public addPizza(pizza) {
+    this.pizzaList.push(pizza);
   }
 
-  public windowClose() {
-    document.getElementById('modal-shadow').style.display = 'none';
-    document.getElementById('modal-window').style.display = 'none';
+  public addSauce(sauce) {
+    this.sauceList.push(sauce);
+  }
+  public addDrinks(drinks) {
+    this.drinksList.push(drinks);
+  }
+
+  public deletePizza(pizzaDelete) {
+    this.pizzaList = this.pizzaList.filter(obj => obj !== pizzaDelete);
+  }
+  public deleteDrinks(drinks) {
+    this.drinksList = this.drinksList.filter(obj => obj !== drinks);
+  }
+  public deleteSauce(sauce) {
+    this.sauceList = this.sauceList.filter(obj => obj !== sauce);
   }
 
 

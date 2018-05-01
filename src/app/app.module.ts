@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -16,6 +15,8 @@ import {SaucesService} from '../services/sauce/sauces.service';
 import {DrinksService} from '../services/drinks/drinks.service';
 import {PizzaService} from '../services/pizza/pizza.service';
 import { OrderComponent } from './order/order.component';
+import {SizepizzaService} from '../services/sizepizza/sizepizza.service';
+import {FormsModule} from '@angular/forms';
 
 const routes = [
   {path: 'home', component: HomePageComponent},
@@ -45,12 +46,14 @@ const routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     SaucesService,
     DrinksService,
-    PizzaService
+    PizzaService,
+    SizepizzaService
   ],
   bootstrap: [AppComponent]
 })

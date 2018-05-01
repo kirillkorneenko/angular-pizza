@@ -15,7 +15,7 @@
           <div class="cardprice w-clearfix">
             <div class="priceca">{{drink.price}}</div>
           </div>
-          <div><input type="button" name="box" class="box" value="В корзину"></div>
+          <div><input (click)="addToBasket(drink)" type="button" name="box" class="box" value="В корзину"></div>
         </div>
       </div>
       </div>
