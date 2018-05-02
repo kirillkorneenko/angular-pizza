@@ -2,6 +2,7 @@ aside{
   display: flex;
   background-color: #FFE4B5;
   width: 300px;
+  height: 635px;
   float: right;
   z-index: 40;
   position: relative;
@@ -10,6 +11,7 @@ aside{
   border-radius: 10px;
   padding: 10px;
   position: fixed;
+  overflow-y: scroll;
 }
 
 .cost{
@@ -168,4 +170,17 @@ aside{
 .b{
   margin-bottom: 90px;
 }
+
+.tdp{
+  background-color:green;
+}
+
+.tds{
+  background-color:white;
+}
+
+.tdv{
+  background-color: red;
+}
+
 
