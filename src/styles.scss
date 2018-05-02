@@ -15,7 +15,7 @@ body{
 
 header{
   padding: 0px 0px;
-  justify-content: left;
+  justify-content: center;
   display: flex;
   background-color: #FAEBD7;
   width: 70%;
@@ -106,21 +106,30 @@ legend{
 }
 
 .pizza{
-  position: relative;
+
   font:bold 24px Century Gothic;
-  width: 70px;
-  bottom:10px;
   color: #66CDAA;
+  padding: 0px;
+  margin: 10px;
+  width: 120px;
+  text-align: right;
+}
+td{
+  vertical-align: bottom;
 }
 
 .vesuvio{
-  position: relative;
-  width: 70px;
-  bottom: 50px;
-  left:80px;
+  color:#cf7e78;
+  font-family: "Lucida Handwriting";
+  font-size: 26px;
+  padding: 0px;
+  margin: 10px;
+  width: 120px;
+
 }
 
 .menu-main{
+  display:inline-table;
   position: relative;
   list-style: none;
   padding: 0;
@@ -133,7 +142,7 @@ legend{
 
 li{
   float: left;
-  font:bold 16px Arial;
+  font:bold 20px Arial;
 }
 
 .current{
@@ -147,8 +156,9 @@ li{
 }
 
 a.current:hover{
-  color:#fff;
-  background:#888;
+  color:#666;
+  background:#FFF8DC;
+  border-radius:10px ;
 }
 
 .cap{
@@ -168,13 +178,15 @@ a.current:hover{
 .registration{
   list-style: none;
   text-decoration:none;
-  font:bold 14px Arial;
+  font:bold 18px Arial;
   color:#666;
 
+  float: right;
 }
 .registration:hover{
-  color:#fff;
-  background:#888;
+  color:#666;
+  background:#FFF8DC;
+  border-radius:10px ;
 }
 
 #zatemnenie {
@@ -422,9 +434,26 @@ h1{
   -ms-flex: 1;
   flex: 1;
   color: #707070;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 23px;
   text-align: left;
 }
 
+tr{
+  padding: 0px;
+}
+
+.all_delete1{
+  margin-bottom: 10px;
+}
+
+.all_delete{
+  font-size: 17px;
+  border-color: transparent;
+  background-color: inherit;
+  color: #8B7355;
+  line-height: 24px;
+  font-weight: 600;
+
+}
 

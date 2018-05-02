@@ -1,21 +1,34 @@
 <div class="headr">
   <header>
     <div class="fix">
-      <img src="assets/image/emblema.jpg" alt="cap">
-      <div class="name">
-        <p class="pizza">PIZZA</p>
-        <p class="vesuvio"> Vesuvio</p>
+      <div>
+        <ul class="menu-main">
+          <li><a routerLink="pizza" class="current">Пицца</a></li>
+          <li><a routerLink="sauces" class="current">Соусы</a></li>
+          <li><a routerLink="drinks" class="current">Напитки</a></li>
+
+        </ul>
       </div>
+
+      <table border="0" >
+        <tr>
+          <td class="tdp"><div class="pizza">PIZZA</div></td>
+          <td><div><img src="assets/image/эмблема1.png" alt="cap"></div></td>
+          <td class="tdv"><div class="vesuvio"> Vesuvio</div></td>
+        </tr>
+      </table>
+
+
+
       <ul class="menu-main">
-        <li><a routerLink="pizza" class="current">Пицца</a></li>
-        <li><a routerLink="sauces" class="current">Соусы</a></li>
-        <li><a routerLink="drinks" class="current">Напитки</a></li>
         <li><a routerLink="about-us" class="current">О нас</a></li>
         <li><a routerLink="contacts" class="current">Контакты</a></li>
         <li><a routerLink="home" class="current">Главная</a></li>
-        <li><a routerLink="" class="current">Корзина</a></li>
       </ul>
-      <div class="enter"><a routerLink="enter" class="registration">Вход/Регистрация</a></div>
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      <div class="enter">
+
+        <a routerLink="enter" class="registration">Войти</a></div>
     </div>
   </header>
 </div>
@@ -93,8 +106,10 @@
 
           <div class="opiscard"><div class="total_cost">Общая стоимость:</div>  0 руб.</div>
           <div class="advertising" >
-            <b>Возьмите к пицце<br> напитки</b>
-            <input type="button" name="adv_drink" class="adv_drink" value="Выбрать напитки" routerLink="drinks">
+            <div class="b">
+              <b>Возьмите к пицце<br> напитки</b>
+            </div>
+            <div class="top50"><input type="button" name="adv_drink" class="adv_drink" value="Выбрать напитки" onclick="location.href='drinks'"></div>
 
           </div>
           <div><input type="button" name="order" class="order" value="Оформить заказ" routerLink="order"></div>
