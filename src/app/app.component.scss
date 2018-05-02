@@ -12,6 +12,8 @@ aside{
   padding: 10px;
   position: fixed;
   overflow-y: scroll;
+  padding-top:15px;
+  padding-bottom:15px;
 }
 
 .cost{
@@ -165,22 +167,50 @@ aside{
   color: white;
   font-size: 20px;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .b{
   margin-bottom: 90px;
-}
+  font-size: 19px;
+  color: #551A8B;
+ }
 
 .tdp{
-  background-color:green;
+  background-color:#698B22;
+  border-radius: 10px;
+
 }
 
 .tds{
   background-color:white;
+  border-radius: 10px;
 }
 
 .tdv{
-  background-color: red;
+  background-color:#CD5555;
+  border-radius: 10px;
 }
 
+table{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.vhod{
+  position: relative;
+  bottom: 10px;
+  left: 55px;
+}
+
+.adv_drink{
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.social{
+  position: relative;
+  left:350px;
+}
