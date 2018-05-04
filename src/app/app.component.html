@@ -35,24 +35,18 @@
 
 <aside>
   <div class="card">
-    <!--<div *ngFor="let drink of data">-->
+
       <div class="cardo" data-item="0" data-id="786584dc-a255-4da5-a020-1c58917d903e">
 
         <div  class="cardopis">
          <div class="cardzago">Ваш заказ:</div>
 
-
-
               <div *ngFor="let pizza of pizzaList">
                 <div class="product">
             <div class="pr_name">{{pizza.name}}</div>
             <div class="pr_size">{{pizza.size.size}}</div>
-              <div class="pr_size">{{pizza.pastry}}</div>
+              <div class="pr_size">{{pizza.pastry.kind}}</div>
             <div>
-            <!--<span class="b-inp-num">-->
-            <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
-            <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
-            <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
             <div class="rub">{{pizza.price}} </div>
             </div>
             <div>
@@ -65,10 +59,6 @@
                 <div class="product">
                 <div class="pr_name">{{sauce.name}}</div>
                 <div>
-                  <!--<span class="b-inp-num">-->
-                  <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
-                  <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
-                  <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
                   <div class="rub">{{sauce.price}} </div>
                 </div>
                 <div><button (click)="deleteSauce(sauce)" class="pr_delete">Удалить</button></div>
@@ -91,25 +81,16 @@
                 </div>
               </div>
 
-          <!--<div class="product">-->
-           <!--<div class="pr_name">Гавайская</div>-->
-            <!--<div class="pr_size">Традиция 23см</div>-->
-            <!--<div>-->
-            <!--<span class="b-inp-num">-->
-              <!--<b class="b-inp-num__dec" ng-click="pizzaCountChange(p.active_pizza_id, 0)"></b>-->
-              <!--<input ng-model="p.pizzas[p.active_pizza_id].pizzaCount" class="b-inp-num__input ng-pristine ng-valid" type="text" value="1">-->
-              <!--<b class="b-inp-num__inc" ng-click="pizzaCountChange(p.active_pizza_id, 1)"></b></span>-->
-            <!--<div class="rub">6 руб. </div>-->
-              <!--</div>-->
-            <!--<div id="pr_delete"><a href=" " class="pr_delete">Удалить</a></div>-->
-          <!--</div>-->
 
-          <div class="opiscard"><div class="total_cost">Общая стоимость:</div>  0 руб.</div>
+          <div class="opiscard">
+            <div class="total_cost">Общая стоимость:</div>
+           {{getTotalCost()}}
+          </div>
           <div class="advertising" >
             <div class="b">
               <b>Возьмите к пицце<br> напитки</b>
             </div>
-            <div class="top50"><input type="button" name="adv_drink" class="adv_drink" value="Выбрать напитки" onclick="location.href='drinks'"></div>
+            <div class="top50"><input type="button" name="adv_drink" class="adv_drink" value="Выбрать напитки" routerLink="drinks"></div>
 
           </div>
 
@@ -134,43 +115,3 @@
 </div>
 
 
-<!--<div id="zatemnenie">
-  <div id="okno">
-    <form action="" class="ui-form">
-      <h3>Войти на сайт</h3>
-      <div class="form-row">
-        <input type="text" id="email"  autocomplete="off"><label for="email">Email</label>
-      </div>
-      <div class="form-row">
-        <input type="password" id="password"  autocomplete="off"><label for="password">Пароль</label>
-      </div>
-      <p><input type="submit" value="Войти"></p>
-      <p><input type="button" name="button" id="button" value="Регистрация" onclick="windowOpen()"></p>
-    </form>
-    <a href="" class="close">X</a>
-  </div>
-</div>-->
-
-<!--
-<div id="modal-shadow" class="modal-shadow"></div>
-<div id="modal-window" class="modal-window">
-  <form action="" class="ui-form">
-    <h3>Регистрация</h3>
-    <div class="form-row">
-      <input type="text" id="surname"  autocomplete="off"><label for="surname">Фамилия</label>
-    </div>
-    <div class="form-row">
-      <input type="text" id="name"  autocomplete="off"><label for="name">Имя</label>
-    </div>
-    <div class="form-row">
-      <input type="text" id="email1"  autocomplete="off"><label for="email">Email</label>
-    </div>
-    <div class="form-row">
-      <input type="password" id="password1"  autocomplete="off"><label for="password">Пароль</label>
-    </div>
-    <p><input type="submit" value="Зарегистрироваться" ></p>
-    <p><input type="submit" value="Вернуться ко входу на сайт" onclick="windowClose()"></p>
-
-  </form>
-</div>
--->
