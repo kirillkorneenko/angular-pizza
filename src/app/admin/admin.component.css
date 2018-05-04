@@ -1,0 +1,21 @@
+
+table{
+  border: 1px solid #399; /* Граница вокруг таблицы */
+  border-collapse: collapse;
+  width: 90%;
+  background-color:antiquewhite;
+}
+
+td, th{
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #333; /* Граница вокруг ячеек */
+  padding: 10px;
+
+}
+
+.checkbox{
+ opacity: 0.8;
+  border-radius: 10px;
+  font-size: 14px;
+}

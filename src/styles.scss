@@ -136,10 +136,21 @@ td{
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: inherit;
   height: 40px;
   top: 90px;
+}
 
+.menu-main1{
+  display:inline-table;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: inherit;
+  height: 40px;
+  top: 90px;
+  width: 500px;
 }
 
 li{

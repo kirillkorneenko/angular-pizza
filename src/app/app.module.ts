@@ -20,6 +20,7 @@ import {FormsModule} from '@angular/forms';
 import {OrderService} from '../services/order/order.service';
 import {ContactsService} from '../services/contacts/contacts.service';
 import {PastryService} from '../services/pastry/pastry.service';
+import { AdminComponent } from './admin/admin.component';
 
 const routes = [
   {path: 'home', component: HomePageComponent},
@@ -30,7 +31,8 @@ const routes = [
   {path: 'contacts', component: ContactsComponent},
   {path: 'enter', component: EnterComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'order', component: OrderComponent}
+  {path: 'order', component: OrderComponent},
+  {path: 'admin', component: AdminComponent}
 ];
 
 
@@ -44,7 +46,8 @@ const routes = [
     PizzaComponent,
     ContactsComponent,
     EnterComponent,
-    OrderComponent
+    OrderComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
