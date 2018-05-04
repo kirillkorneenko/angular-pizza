@@ -43,7 +43,7 @@ nav{
 
 article{
   justify-content: center;
-  padding: 10px 20px 20px;
+  padding: 20px 20px 20px;
   height: 100%;
   flex-basis: 60%; /* = width: 70%;*/
   min-height: 580px;
@@ -54,6 +54,7 @@ article{
   border-radius: 7px;
   z-index: 1;
   box-shadow: 0 0 30px;
+
 }
 
 footer{
@@ -182,9 +183,8 @@ a.current:hover{
 .registration{
   list-style: none;
   text-decoration:none;
-  font:bold 18px Arial;
+  font:bold 22px Arial;
   color:#666;
-
   float: right;
 }
 .registration:hover{
