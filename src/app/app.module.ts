@@ -22,7 +22,7 @@ import {ContactsService} from '../services/contacts/contacts.service';
 import {PastryService} from '../services/pastry/pastry.service';
 
 const routes = [
-  {path: '', component: HomePageComponent},
+  {path: 'home', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'sauces', component: SaucesComponent},
   {path: 'drinks', component: DrinksComponent},
