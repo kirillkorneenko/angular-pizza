@@ -19,7 +19,7 @@ import {SizepizzaService} from '../services/sizepizza/sizepizza.service';
 import {FormsModule} from '@angular/forms';
 
 const routes = [
-  {path: 'home', component: HomePageComponent},
+  {path: '', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'sauces', component: SaucesComponent},
   {path: 'drinks', component: DrinksComponent},
