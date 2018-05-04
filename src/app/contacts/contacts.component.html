@@ -2,54 +2,57 @@
 <div class="small">
   <article>
 
+    <div *ngFor="let sauce of _data">
     <div class="restcard" data-item="0">
       <a data-id="5a09d1f6be8996bccb3c7c6b" class="photo restor-link w-inline-block">
-        <img src="https://new.telepizza-russia.ru:8776/public/images/1520837613857-pros09.JPG">
+        <img src="{{sauce.imgUrl}}">
       </a>
       <div class="info">
         <div class="infotext">
-          <div class="restourant">РЕСТОРАН НА ОКТЯБРЬСКОЙ</div>
+          <div class="restourant">{{sauce.name}}</div>
           <div class="metro">
             <img class="m-color" src="assets/image/метро.png" height="50px" width="50px">
-            <p>Первомайская</p>
+            <p>{{sauce.metro}}</p>
           </div>
-          <div class="addres">Улица Октябрьская, дом 16 к.2</div>
-          <div class="phone">Тел. +375291523686</div>
+          <div class="addres">{{sauce.address}}</div>
+          <div class="phone">{{sauce.phone}}</div>
         </div>
       </div>
 </div>
-    <div class="restcard" data-item="0">
-      <a data-id="5a09d1f6be8996bccb3c7c6b" class="photo restor-link w-inline-block">
-        <img src="https://new.telepizza-russia.ru:8776/public/images/1520775700521-TeleLeninsky17.jpg">
-      </a>
-      <div class="info">
-        <div class="infotext">
-          <div class="restourant">РЕСТОРАН НА ГИКАЛО</div>
-          <div class="metro">
-            <img class="m-color" src="assets/image/метро.png" height="50px" width="50px">
-            <p>Якуба Коласа</p>
-          </div>
-          <div class="addres">Улица Гигало, дом 11</div>
-          <div class="phone">Тел. +375291230003</div>
-        </div>
-      </div>
     </div>
-    <div class="restcard" data-item="0">
-      <a data-id="5a09d1f6be8996bccb3c7c6b" class="photo restor-link w-inline-block">
-        <img src="https://new.telepizza-russia.ru:8776/public/images/1520539437591-TeleVeteranov03.jpg">
-      </a>
-      <div class="info">
-        <div class="infotext">
-          <div class="restourant">РЕСТОРАН НА ПУШКИНСКОЙ</div>
-          <div class="metro">
-            <img class="m-color" src="assets/image/метро.png" height="50px" width="50px">
-            <p class="p1">Спортивная</p>
-          </div>
-          <div class="addres">Улица Притыцкого, дом 30</div>
-          <div class="phone">Тел. +375291203333</div>
-        </div>
-      </div>
-    </div>
+
+    <!--<div class="restcard" data-item="0">-->
+      <!--<a data-id="5a09d1f6be8996bccb3c7c6b" class="photo restor-link w-inline-block">-->
+        <!--<img src="https://new.telepizza-russia.ru:8776/public/images/1520775700521-TeleLeninsky17.jpg">-->
+      <!--</a>-->
+      <!--<div class="info">-->
+        <!--<div class="infotext">-->
+          <!--<div class="restourant">РЕСТОРАН НА ГИКАЛО</div>-->
+          <!--<div class="metro">-->
+            <!--<img class="m-color" src="assets/image/метро.png" height="50px" width="50px">-->
+            <!--<p>Якуба Коласа</p>-->
+          <!--</div>-->
+          <!--<div class="addres">Улица Гигало, дом 11</div>-->
+          <!--<div class="phone">Тел. +375291230003</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="restcard" data-item="0">-->
+      <!--<a data-id="5a09d1f6be8996bccb3c7c6b" class="photo restor-link w-inline-block">-->
+        <!--<img src="https://new.telepizza-russia.ru:8776/public/images/1520539437591-TeleVeteranov03.jpg">-->
+      <!--</a>-->
+      <!--<div class="info">-->
+        <!--<div class="infotext">-->
+          <!--<div class="restourant">РЕСТОРАН НА ПУШКИНСКОЙ</div>-->
+          <!--<div class="metro">-->
+            <!--<img class="m-color" src="assets/image/метро.png" height="50px" width="50px">-->
+            <!--<p class="p1">Спортивная</p>-->
+          <!--</div>-->
+          <!--<div class="addres">Улица Притыцкого, дом 30</div>-->
+          <!--<div class="phone">Тел. +375291203333</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
   </article>
 
 </div>

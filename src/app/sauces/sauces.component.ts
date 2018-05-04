@@ -11,14 +11,6 @@ export class SaucesComponent implements OnInit {
 
   data: Array<any>;
 
-//   sauce = {
-//     id: null,
-//     name: null,
-//   description: null,
-//   urlImg : null,
-//   price: null
-// };
-
   constructor(private saucesService: SaucesService,  private appComponent: AppComponent) { }
 
   ngOnInit() {

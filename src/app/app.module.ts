@@ -17,6 +17,9 @@ import {PizzaService} from '../services/pizza/pizza.service';
 import { OrderComponent } from './order/order.component';
 import {SizepizzaService} from '../services/sizepizza/sizepizza.service';
 import {FormsModule} from '@angular/forms';
+import {OrderService} from '../services/order/order.service';
+import {ContactsService} from '../services/contacts/contacts.service';
+import {PastryService} from '../services/pastry/pastry.service';
 
 const routes = [
   {path: '', component: HomePageComponent},
@@ -53,7 +56,10 @@ const routes = [
     SaucesService,
     DrinksService,
     PizzaService,
-    SizepizzaService
+    SizepizzaService,
+    OrderService,
+    ContactsService,
+    PastryService
   ],
   bootstrap: [AppComponent]
 })
