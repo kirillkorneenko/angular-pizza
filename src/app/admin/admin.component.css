@@ -1,5 +1,5 @@
 
-table{
+.adm{
   /*border: 1px solid #399; *//* Граница вокруг таблицы */
   border-collapse: collapse;
   width: 95%;
@@ -7,19 +7,40 @@ table{
   background-color: #fff;
   padding: 10px;
   border: 3px solid #ebecec;
-
+box-shadow: 0px 0px 15px ;
 
 }
 
 td, th{
   text-align: center;
   background-color: #fff;
-  padding: 10px;
+  padding: 5px;
   border: 3px solid #ebecec;
   color: #8B7355;
   font-size: 16px;
   font-weight: bold;
+}
 
+.table1{
+  /*border: 1px solid #399; *//* Граница вокруг таблицы */
+  border-collapse: collapse;
+  width: 95%;
+  /*background-color:antiquewhite;*/
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+
+
+}
+
+.td1, .th1{
+  text-align: center;
+  background-color: #fff;
+  padding: 0px;
+  border: none;
+  color: #8B7355;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .checkbox{
@@ -27,3 +48,7 @@ td, th{
   font-size: 14px;
 }
 
+.icons{
+  width: 40px;
+  height: 40px;
+}
