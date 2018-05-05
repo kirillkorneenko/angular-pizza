@@ -1,21 +1,29 @@
 
 table{
-  border: 1px solid #399; /* Граница вокруг таблицы */
+  /*border: 1px solid #399; *//* Граница вокруг таблицы */
   border-collapse: collapse;
-  width: 90%;
-  background-color:antiquewhite;
+  width: 85%;
+  /*background-color:antiquewhite;*/
+  background-color: #fff;
+  padding: 10px;
+  border: 3px solid #ebecec;
+
+
 }
 
 td, th{
   text-align: center;
-  justify-content: center;
-  border: 2px solid #333; /* Граница вокруг ячеек */
+  background-color: #fff;
   padding: 10px;
+  border: 3px solid #ebecec;
+  color: #8B7355;
+  font-size: 16px;
+  font-weight: bold;
 
 }
 
 .checkbox{
- opacity: 0.8;
-  border-radius: 10px;
+   border-radius: 10px;
   font-size: 14px;
 }
+

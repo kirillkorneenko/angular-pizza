@@ -15,40 +15,30 @@
           <div class="titcard">
             <div class="cardzago">Пицца {{pizza.name}} </div>
           </div>
-
           <div class="opiscard"><b>Состав:</b>
             <div *ngFor="let ingredient of pizza.ingredients">{{ingredient.name}}, </div>
           </div>
-
           <div class="select_size">
             <select #categoriesCtrl (change)="newDrow" >
             <option *ngFor="let sizeName of sizes" [value]="sizeName.size">{{sizeName.size}}</option>
           </select>
           </div>
-
           <div class="select_size">
             <select #categoriesPastry (change)="newDrow" >
               <option *ngFor="let item of pastryies" [value]="item.kind">{{item.kind}}</option>
             </select>
           </div>
-
           <div class="opiscard"><b>Калорийность:</b> {{calcCall(pizza, categoriesCtrl.value, categoriesPastry.value)}}</div>
-
-
           <div class="cardprice w-clearfix">
             <div class="priceca" #newDrow>{{calcPrice(pizza, categoriesCtrl.value, categoriesPastry.value)}}</div>
-
           </div>
-
           <div>
             <input (click)="addToBasket(pizza, categoriesCtrl.value, categoriesPastry.value)"  type="button" name="box" class="box" value="В корзину">
-
           </div>
         </div>
         <div class="all_delete1"><input type="button" class="all_delete" value="Удалить"></div>
       </div>
         </div>
-
     </div>
   </article>
 </div>

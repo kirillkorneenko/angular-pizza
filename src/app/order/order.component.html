@@ -18,8 +18,9 @@
         <label>Имя*</label>
         <input [(ngModel)]="order.name" type="text" class="field w-input" maxlength="60" autocomplete="false" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="firstName" required="" placeholder="Имя*">
       </div>
-      <div class="heads">Адрес доставки</div>
+      <div class="heads">Адрес ресторана для самовывоза</div>
       <div class="input-group">
+        <label>Место самовывоза*</label>
           <select [(ngModel)]="order.address" >
             <option *ngFor="let item of address" [ngValue]="item">{{item.address}}</option>
           </select>
@@ -27,12 +28,12 @@
         <!--<input [(ngModel)]="order.address" type="text" class="field w-input" maxlength="60" autocomplete="false" pattern="[A-Za-zА-Яа-яЁё]{1,}, [0-9]{1,}-[0-9]{1,}" name="firstName" required="" placeholder="Например: Пономарёва, 6-7">-->
       </div>
       <div class="input-group">
-        <label>Желаемое время доставки*</label>
-        <input type="text" class="field w-input" maxlength="60" autocomplete="false" name="firstName" required="" placeholder="Время, в которое заказ должен быть доставлен">
+        <label>Желаемое время получения заказа*</label>
+        <input type="text" class="field w-input" maxlength="60" autocomplete="false" name="firstName" required="" placeholder="Время, в которое вы планируете забрать заказ">
       </div>
     </div>
-    <div class="input-group">
-      <label>Время доставки  50мин</label>
+    <div class="input-group time">
+      <label>Время приготовления заказа:<br><br> 50мин</label>
       </div>
     <div class="heads">Комментарии к заказу</div>
     <div class="input-group">
