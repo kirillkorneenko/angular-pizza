@@ -1,10 +1,9 @@
 <div class="title"><h1 class="h1red">Оформление заказа</h1></div>
 <div class="small">
 <article>
+  <div *ngIf="isOrder">
   <form id="registration-form" class="form-pop-up-window button-registration">
     <div class="step01">
-
-
 <div class="heads">Личные данные</div>
       <div class="input-group">
         <label>Телефон*</label>
@@ -21,19 +20,13 @@
       <div class="heads">Адрес ресторана для самовывоза</div>
       <div class="input-group">
         <label>Место самовывоза*</label>
-          <select [(ngModel)]="order.address" >
-            <option *ngFor="let item of address" [ngValue]="item">{{item.address}}</option>
+          <select [(ngModel)]="order.address" name="address">
+            <option *ngFor="let item of addressList" [ngValue]="item">{{item.address}}</option>
           </select>
-        <!--<label>Ваш адрес*</label>-->
-        <!--<input [(ngModel)]="order.address" type="text" class="field w-input" maxlength="60" autocomplete="false" pattern="[A-Za-zА-Яа-яЁё]{1,}, [0-9]{1,}-[0-9]{1,}" name="firstName" required="" placeholder="Например: Пономарёва, 6-7">-->
-      </div>
-      <div class="input-group">
-        <label>Желаемое время получения заказа*</label>
-        <input type="text" class="field w-input" maxlength="60" autocomplete="false" name="firstName" required="" placeholder="Время, в которое вы планируете забрать заказ">
-      </div>
+         </div>
     </div>
     <div class="input-group time">
-      <label>Время приготовления заказа:<br><br> 50мин</label>
+      <label>Время приготовления заказа: 50мин</label>
       </div>
     <div class="heads">Комментарии к заказу</div>
     <div class="input-group">
@@ -43,6 +36,14 @@
       <input (click)="checkout()" type="submit" value="Оформить заказ" class="button registration-button w-button">
     </div>
   </form>
+  </div>
+
+  <div *ngIf="!isOrder">
+    <div class="heads">Ваш заказ оформлен</div>
+    <div class="registration-button-block">
+      <input (click)="clickOrder()" routerLink="pizza" type="submit" value="заказать еще" class="button registration-button w-button">
+    </div>
+  </div>
 
 </article>
 </div>

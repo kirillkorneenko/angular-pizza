@@ -18,7 +18,7 @@
           <div><input (click)="addToBasket(drink)" type="button" name="box" class="box" value="В корзину">
           </div>
         </div>
-        <div class="all_delete1"><input type="button" class="all_delete" value="Удалить"></div>
+        <div class="all_delete1"><input (click)="deleteDrinkOnServer(drink.id)" type="button" class="all_delete" value="Удалить"></div>
       </div>
       </div>
     </div>

@@ -11,16 +11,16 @@ import {ContactsService} from '../../services/contacts/contacts.service';
 })
 export class OrderComponent implements OnInit {
 
+  private isOrder = true;
 
-  private address: Array<any>;
+  private addressList: Array<any>;
 
   order = {
     phone : '',
     name: '',
     surname : '',
-    address: '',
+    address: null,
     comment: '',
-    cookingTime: '',
     totalCost: null,
     pizzaList : [],
     sauceList: [],
@@ -39,14 +39,20 @@ export class OrderComponent implements OnInit {
     this.order.sauceList = this.appComponent.sauceList;
     this.order.totalCost = this.appComponent.getTotalCost();
     this.orderService.checkout(this.order).subscribe();
+    this.appComponent.clearBasket();
+    this.clickOrder();
   }
 
   private getAllAddress() {
     this.contactsService.getContacts().subscribe(
       (res: any) => {
-        this.address = res;
+        this.addressList = res;
       }
     );
+  }
+
+  public clickOrder(){
+    this.isOrder= !this.isOrder;
   }
 
 }

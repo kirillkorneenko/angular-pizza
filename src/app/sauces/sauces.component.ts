@@ -37,4 +37,12 @@ export class SaucesComponent implements OnInit {
     sauceOut.price = sauce.price;
     this.appComponent.addSauce(sauceOut);
   }
+
+  public deleteSauceOnServer(id){
+    this.saucesService.deleteSauce(id).subscribe(
+      success=>{
+      this.getAll();
+    }
+    );
+  }
 }

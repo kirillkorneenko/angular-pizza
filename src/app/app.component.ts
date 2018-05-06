@@ -52,6 +52,12 @@ export class AppComponent {
     return totalCost;
   }
 
+  public clearBasket(){
+    this._pizzaList = new Array<any> ();
+  this._sauceList = new Array<any> ();
+   this._drinksList = new Array<any> ();
+  }
+
 
   get pizzaList(): any[] {
     return this._pizzaList;

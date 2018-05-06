@@ -17,20 +17,48 @@
         <th>Соусы</th>
       </tr>
       <!--<td></td>-->
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>
-        <table class="table1">
-          <tr class="td1">
-        <td class="td1"><p><input type="image" src="assets/image/check_mark.png"  class="icons"></p></td>
-            <td class="td1"><p><input type="image" src="assets/image/wallet.png"  class="icons"></p></td>
-          </tr>
-        </table>
-      </td>
+
+      <tr *ngFor="let item of data">
+        <td>{{item.userByIdClient.phone}}</td>
+        <td>{{item.userByIdClient.name+ " " + item.userByIdClient.surname }}</td>
+
+          <td>
+            <div *ngFor="let itemPizza of item.orderPizzasById">
+              {{itemPizza.pizzaByIdPizza.name+ " " + itemPizza.sizepizzaByIdSizePizza.size+ " " +itemPizza.pastryByIdPastry.kind}}
+            </div>
+          </td>
+
+          <td>
+            <div *ngFor="let itemDrinkables of item.drinkables">
+              {{itemDrinkables.name}}
+            </div>
+          </td>
+
+          <td>
+            <div *ngFor="let itemSauce of item.sauces">
+              {{itemSauce.name}}
+            </div>
+          </td>
+
+        <td>{{item.totalPrice}}</td>
+
+        <td>
+          <table class="table1">
+            <tr class="td1">
+              <td class="td1">
+                  <div #newDrow>
+                <p><input (click)="confirmedOrder(item)" *ngIf="item.confirmed== 'false'" (change)="newDrow" type="image" src="assets/image/check_mark.png"  class="icons"></p>
+                  </div>
+              </td>
+              <td class="td1">
+                <p><input *ngIf="item.paidFor== 'false'" (click)="paidForOrder(item)" type="image" src="assets/image/wallet.png"  class="icons"></p>
+              </td>
+            </tr>
+          </table>
+        </td>
+        </tr>
+
+
       <!--<td></td>-->
     </table>
   </article>

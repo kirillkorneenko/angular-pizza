@@ -78,4 +78,12 @@ export class PizzaComponent implements OnInit {
     const itemPastry = this.pastryies.find(i => i.kind === pastry);
     return ((pizz.price * itemSize.coefficient)+ (itemPastry.price*itemSize.coefficient));
   }
+
+  public deletePizzaOnServer(id){
+    this.pizzaService.deletePizza(id).subscribe(
+      success=>{
+        this.getAll();
+      }
+    );
+  }
 }

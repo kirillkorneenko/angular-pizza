@@ -11,4 +11,8 @@ export class DrinksService {
   getAllDrinks(): Observable<any> {
   return this.http.get('http://localhost:8080/drinks');
 }
+
+  deleteDrink(id): Observable<any>{
+    return this.http.delete('http://localhost:8080/drink'+id);
+  }
 }

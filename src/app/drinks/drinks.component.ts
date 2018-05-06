@@ -38,4 +38,13 @@ export class DrinksComponent implements OnInit {
     this.appComponent.addDrinks(drinkOut);
   }
 
+
+  public deleteDrinkOnServer(id){
+    this.drinksService.deleteDrink(id).subscribe(
+      success=>{
+        this.getAll();
+      }
+    );
+
+  }
 }
