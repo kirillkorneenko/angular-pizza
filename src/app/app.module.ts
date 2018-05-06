@@ -35,7 +35,8 @@ const routes = [
   {path: 'enter', component: EnterComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'order', component: OrderComponent},
-  {path: 'admin', component: AdminComponent}
+  {path: 'admin', component: AdminComponent},
+  {path: 'add_food', component: AddFoodComponent},
 ];
 
 
