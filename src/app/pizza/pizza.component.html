@@ -36,7 +36,7 @@
             <input (click)="addToBasket(pizza, categoriesCtrl.value, categoriesPastry.value)"  type="button" name="box" class="box" value="В корзину">
           </div>
         </div>
-        <div class="all_delete1"><input (click)="deletePizzaOnServer(pizza.id)" type="button" class="all_delete" value="Удалить"></div>
+        <div class="all_delete1"><input *hasRole="['admin']" (click)="deletePizzaOnServer(pizza.id)" type="button" class="all_delete" value="Удалить"></div>
       </div>
         </div>
     </div>

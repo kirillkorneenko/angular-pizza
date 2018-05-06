@@ -26,7 +26,7 @@ import {UserService} from '../services/user/user.service';
 import { AddFoodComponent } from './add-food/add-food.component';
 
 const routes = [
-  {path: 'home', component: HomePageComponent},
+  {path: '', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'sauces', component: SaucesComponent},
   {path: 'drinks', component: DrinksComponent},
@@ -53,7 +53,6 @@ const routes = [
     OrderComponent,
     AdminComponent,
     HasRoleDirective,
-    AdminComponent,
     AddFoodComponent
   ],
   imports: [
