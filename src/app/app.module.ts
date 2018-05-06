@@ -23,9 +23,10 @@ import {PastryService} from '../services/pastry/pastry.service';
 import { AdminComponent } from './admin/admin.component';
 import { HasRoleDirective } from '../directive/has-role.directive';
 import {UserService} from '../services/user/user.service';
+import { AddFoodComponent } from './add-food/add-food.component';
 
 const routes = [
-  {path: '', component: HomePageComponent},
+  {path: 'home', component: HomePageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'sauces', component: SaucesComponent},
   {path: 'drinks', component: DrinksComponent},
@@ -50,7 +51,9 @@ const routes = [
     EnterComponent,
     OrderComponent,
     AdminComponent,
-    HasRoleDirective
+    HasRoleDirective,
+    AdminComponent,
+    AddFoodComponent
   ],
   imports: [
     BrowserModule,

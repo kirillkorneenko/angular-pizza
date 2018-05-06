@@ -17,7 +17,7 @@ header{
   padding: 0px 0px;
   justify-content: center;
   display: flex;
-  background-color: RGBA(250,235,215,0.8);
+  background-color: RGBA(250,235,215,0);
   width: 70%;
   margin-bottom: 160px;
   z-index: 50;
@@ -28,7 +28,7 @@ header{
   display: flex;
   justify-content: center;
   z-index: 50;
-
+  background-color: RGBA(250,235,215,0);
 }
 
 .foot{
@@ -61,7 +61,7 @@ footer{
   padding: 10px 0px;
   justify-content: center;
   display: flex;
-  background-color: #FAEBD7;
+  background-color: RGBA(250,235,215,0.5);
   width: 70%;
   margin-top: 30px;
   border-radius: 7px;
@@ -80,7 +80,7 @@ footer{
   position: fixed;
   /*padding: 10px 0px;*/
   display: flex;
-  background-color: RGBA(250,235,215,1);
+  background-color: RGBA(250,235,215,0.5);
   top: 0;
   border-radius: 7px;
   box-shadow: 0 0 30px;
@@ -387,15 +387,16 @@ h1{
   text-align: center;
   font-size: 30px;
   color:#8B7355;
-  background:#FFE4B5;
+  background-color: #FFE4B5;
   flex-basis: 60%;
   border-radius: 10px;
-  box-shadow: 0 0 40px;
+ /* box-shadow: 0 0 40px;*/
 }
 
 .title{
   display: flex;
   justify-content: center;
+
 }
 
 .circle{

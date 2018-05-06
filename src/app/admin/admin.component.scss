@@ -1,14 +1,31 @@
 
 .adm{
+
   /*border: 1px solid #399; *//* Граница вокруг таблицы */
   border-collapse: collapse;
-  width: 95%;
+  width: 100%;
   /*background-color:antiquewhite;*/
   background-color: #fff;
   padding: 10px;
   border: 3px solid #ebecec;
 box-shadow: 0px 0px 15px ;
 
+}
+
+.two{
+  width: 95%;
+  border-spacing: 0px 20px;
+
+}
+
+.but{
+  text-align: center;
+  background-color: inherit;
+  padding: 5px;
+  border: none;
+  color: #8B7355;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 td, th{
@@ -51,4 +68,17 @@ td, th{
 .icons{
   width: 40px;
   height: 40px;
+}
+
+.order{
+  width: 100%;
+  padding: 10px;
+  line-height: 42px;
+  background: #DEB887;
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
