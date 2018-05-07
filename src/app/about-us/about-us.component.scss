@@ -2,3 +2,82 @@
 p{
   font-size: 18px;
 }
+
+.review{
+  font-size: 22px;
+  text-decoration: none;
+  color:#707070;
+}
+
+
+.people{
+  border: 3px solid #8B7355;
+  border-radius: 20px;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  float:left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+
+}
+
+#text{
+  margin: 20px;
+  text-align: justify;
+  color:#707070;
+
+}
+
+.circle{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 2px solid #8B7355;
+  border-radius: 100px;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: none;
+}
+
+#history{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  color: #707070;
+}
+
+.onediv {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.citx {
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #707070;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left;
+}

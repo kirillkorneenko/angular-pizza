@@ -1,23 +1,114 @@
-<div class="title"><h1 class="h1red">Авторизация</h1></div>
+<div class="title"><h1 class="h1red">Добавление данных</h1></div>
 <div class="small">
   <article>
-    <div class="input-group">
-      <label>Телефон*</label>
-      <input  type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Телефон*" required="">
-    </div>
-    <div class="input-group">
-      <label>Фамилия*</label>
-      <input  type="text" class="field w-input" maxlength="60" autocomplete="false" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="lastName" required="" placeholder="Фамилия*">
-    </div>
-    <div class="input-group">
-      <label>Имя*</label>
-      <input  type="text" class="field w-input" maxlength="60" autocomplete="false" pattern="[A-Za-zА-Яа-яЁё]{1,}" name="firstName" required="" placeholder="Имя*">
-    </div>
-    <div class="heads">Адрес ресторана для самовывоза</div>
-    <div class="input-group">
-      <label>Место самовывоза*</label>
+    <table>
+      <tr>
+        <td>
+<div class="cartlist authorization">
+  <div class="authorization-content">
+    <div class="registration-block">
+      <div class="akcotitle">Добавление напитка</div>
+      <form id="registration-form" class="form-pop-up-window button-registration">
+        <div class="step01">
+          <div class="input-group">
+            <label>Ссылка на изображение</label>
+            <input type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
+          </div>
+          <div class="input-group">
+            <label>Название напитка</label>
+            <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+          </div>
+          <div class="input-group">
+            <label>Описание</label>
+            <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+          </div>
+          <div class="input-group">
+            <label>Цена напитка</label>
+            <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Цена" required="">
+          </div>
 
+        <div class="registration-button-block">
+          <input type="submit" value="Добавить" class="button registration-button w-button">
+
+        </div>
+        </div>
+      </form>
     </div>
+  </div>
+</div>
+        </td>
+        <td>
+          <div class="cartlist authorization">
+            <div class="authorization-content">
+              <div class="registration-block">
+                <div class="akcotitle">Добавление соусов</div>
+                <form id="registration-form1" class="form-pop-up-window button-registration">
+                  <div class="step01">
+                    <div class="input-group">
+                      <label>Ссылка на изображение</label>
+                      <input type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
+                    </div>
+                    <div class="input-group">
+                      <label>Название соуса</label>
+                      <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+                    </div>
+                    <div class="input-group">
+                      <label>Описание</label>
+                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                    </div>
+                    <div class="input-group">
+                      <label>Цена соуса</label>
+                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Цена" required="">
+                    </div>
+
+                    <div class="registration-button-block">
+                      <input type="submit" value="Добавить" class="button registration-button w-button">
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </td>
+        <td>
+          <div class="cartlist authorization">
+            <div class="authorization-content">
+              <div class="registration-block">
+                <div class="akcotitle">Добавление пицц</div>
+                <form id="registration-form2" class="form-pop-up-window button-registration">
+                  <div class="step01">
+                    <div class="input-group">
+                      <label>Ссылка на изображение</label>
+                      <input type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
+                    </div>
+                    <div class="input-group">
+                      <label>Название пиццы</label>
+                      <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+                    </div>
+                    <div class="input-group">
+                      <label>Описание</label>
+                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                    </div>
+                    <div class="input-group">
+                      <label>Ингредиенты</label>
+                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Ингрединты" required="">
+                    </div>
+
+                    <div class="registration-button-block">
+                      <input type="submit" value="Добавить" class="button registration-button w-button">
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+    </table>
 
   </article>
 </div>

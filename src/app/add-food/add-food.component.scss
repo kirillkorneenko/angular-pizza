@@ -1,0 +1,131 @@
+.registration-block {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.akcotitle {
+  margin-bottom: 10px;
+  color: #A0522D;
+  font-size: 25px;
+  line-height: 28px;
+  font-weight: 700;
+  font-weight: bold;
+}
+
+.form-pop-up-window {
+  padding-top: 10px;
+  line-height: 16px;
+}
+
+#registration-form .step02, #registration-form .step01 {
+  min-width: 100%;
+  width: 100%;
+}
+
+.cartlist.authorization .input-group {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.cartlist.authorization .input-group input {
+  margin-bottom: 0;
+}
+
+.field {
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 10px;
+}
+.w-input, .w-select {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+.cartlist.authorization .pops.tiz {
+  border-bottom: 1px solid #93939360;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 17px;
+}
+
+.pops.tiz {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+}
+.pops {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 14px;
+  padding-right: 14px;
+  padding-bottom: 14px;
+  padding-left: 14px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #ebecec;
+}
+.cartlist.authorization {
+  padding: 20px 20px;
+  background-size: 80%;
+}
+
+.cartlist {
+  display: block;
+  margin: 10px 10px 30px;
+  padding: 0 0px 30px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 3px solid #ebecec;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .1);
+  font-size: 18px;
+  line-height: 24px;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+input[type="submit"] {
+  width: 100%;
+  padding: 0;
+  line-height: 42px;
+  background: #DEB887;
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+}
+.input-group>label {
+  display: block;
+  width: 250px;
+  /*font-weight: 500;*/
+  margin: 0 15px 0 0;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  /*font-weight: bold;*/
+  font-size: 18px;
+  color: #A0522D;
+}
