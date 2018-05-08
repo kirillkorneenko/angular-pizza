@@ -17,4 +17,7 @@ export class SaucesService {
     return this.http.delete('http://localhost:8080/sauce'+id);
   }
 
+  addSauce(sauce): Observable<any>{
+    return this.http.post('http://localhost:8080/sauce', sauce);
+  }
 }

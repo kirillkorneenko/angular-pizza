@@ -28,7 +28,7 @@
               <option *ngFor="let item of pastryies" [value]="item.kind">{{item.kind}}</option>
             </select>
           </div>
-          <div class="opiscard"><b>Калорийность:</b> {{calcCall(pizza, categoriesCtrl.value, categoriesPastry.value)}}</div>
+          <div class="opiscard" #newDrow><b>Калорийность:</b> {{calcCall(pizza, categoriesCtrl.value, categoriesPastry.value)}}</div>
           <div class="cardprice w-clearfix">
             <div class="priceca" #newDrow>{{calcPrice(pizza, categoriesCtrl.value, categoriesPastry.value)}}</div>
           </div>

@@ -15,4 +15,7 @@ export class PizzaService {
     return this.http.delete('http://localhost:8080/pizza'+id);
   }
 
+  addPizza(pizza): Observable<any>{
+    return this.http.post('http://localhost:8080/pizza', pizza);
+  }
 }

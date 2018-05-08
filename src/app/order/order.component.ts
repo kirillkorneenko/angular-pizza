@@ -34,6 +34,12 @@ export class OrderComponent implements OnInit {
   }
 
   public checkout() {
+    if(localStorage.getItem("user")){
+      const user = JSON.parse(localStorage.getItem("user"));
+      this.order.name =  user.name;
+      this.order.phone =  user.phone;
+      this.order.surname =  user.surname;
+    }
     this.order.pizzaList = this.appComponent.pizzaList;
     this.order.drinksList = this.appComponent.drinksList;
     this.order.sauceList = this.appComponent.sauceList;
@@ -55,4 +61,9 @@ export class OrderComponent implements OnInit {
     this.isOrder= !this.isOrder;
   }
 
+  public isAut(){
+    if(localStorage.getItem("user")){
+      return true;
+    }
+  }
 }

@@ -12,6 +12,10 @@ export class UserService {
   }
 
   authorization(user): Observable<any>{
-    return this.http.get('http://localhost:8080/authorization', user);
+    return this.http.post('http://localhost:8080/authorization', user);
+  }
+
+  getUser(login): Observable<any>{
+    return this.http.get('http://localhost:8080/user'+login);
   }
 }

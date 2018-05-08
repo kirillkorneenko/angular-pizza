@@ -70,4 +70,13 @@ export class AppComponent {
   get drinksList(): any[] {
     return this._drinksList;
   }
+
+  public isAut(){
+    if(localStorage.getItem("user")){
+      return true;
+    }
+  }
+  public outUser(){
+    localStorage.removeItem("user")
+  }
 }

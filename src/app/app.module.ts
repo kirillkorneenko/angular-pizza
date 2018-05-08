@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, TemplateRef, ViewContainerRef} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -25,6 +25,8 @@ import { HasRoleDirective } from '../directive/has-role.directive';
 import {UserService} from '../services/user/user.service';
 import { AddFoodComponent } from './add-food/add-food.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {IngredientService} from '../services/ingredient/ingredient.service';
+import {ReviewsService} from '../services/reviews/reviews.service';
 
 const routes = [
   {path: '', component: HomePageComponent},
@@ -72,7 +74,9 @@ const routes = [
     OrderService,
     ContactsService,
     PastryService,
-    UserService
+    UserService,
+    IngredientService,
+    ReviewsService
   ],
   bootstrap: [AppComponent]
 })

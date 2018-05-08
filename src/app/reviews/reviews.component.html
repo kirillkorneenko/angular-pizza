@@ -4,17 +4,17 @@
     <table class="tab1">
     <tr>
     <table class="tab">
-      <tr class="tr">
-        <td> Привет, Кирилл)) Здесь будет наш отзыв!</td>
-       <td class="cross"><input type="image" src="../assets/image/cross.png"></td>
+      <tr *ngFor="let item of data" class="tr">
+        <td> {{item.text}}</td>
+       <td *hasRole="['admin']"  (click)="deleteReviews(item)" class="cross"><input type="image" src="../assets/image/cross.png"></td>
       </tr>
     </table>
     </tr>
       <tr class="but">
-        <input  type="textarea" сlass="input" maxlength="1000" autocomplete="false" name="add1"  placeholder="Мы будем рады, если вы оставите здесь свой комментарий о нашей пиццерии.">
+        <input [(ngModel)]="reviews.text"  type="textarea" сlass="input" maxlength="1000" autocomplete="false" name="add1">
       </tr>
     <tr class="but">
-     <input  type="button" name="add" class="order" value="Оставить отзыв">
+     <input  (click)="addReviews()" type="button" name="add" class="order" value="Оставить отзыв">
     </tr>
     </table>
   </article>

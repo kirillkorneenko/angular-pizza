@@ -12,23 +12,23 @@
         <div class="step01">
           <div class="input-group">
             <label>Ссылка на изображение</label>
-            <input type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
+            <input [(ngModel)]="drinkAdd.urlImg" type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
           </div>
           <div class="input-group">
             <label>Название напитка</label>
-            <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+            <input [(ngModel)]="drinkAdd.name" type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
           </div>
           <div class="input-group">
             <label>Описание</label>
-            <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+            <input [(ngModel)]="drinkAdd.description" type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
           </div>
           <div class="input-group">
             <label>Цена напитка</label>
-            <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Цена" required="">
+            <input [(ngModel)]="drinkAdd.price" type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Цена" required="">
           </div>
 
         <div class="registration-button-block">
-          <input type="submit" value="Добавить" class="button registration-button w-button">
+          <input (click)="addDrink()" type="submit" value="Добавить" class="button registration-button w-button">
 
         </div>
         </div>
@@ -46,23 +46,23 @@
                   <div class="step01">
                     <div class="input-group">
                       <label>Ссылка на изображение</label>
-                      <input type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
+                      <input [(ngModel)]="sauceAdd.urlImg" type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
                     </div>
                     <div class="input-group">
                       <label>Название соуса</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+                      <input [(ngModel)]="sauceAdd.name"  type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
                     </div>
                     <div class="input-group">
                       <label>Описание</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                      <input [(ngModel)]="sauceAdd.description"  type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
                     </div>
                     <div class="input-group">
                       <label>Цена соуса</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Цена" required="">
+                      <input [(ngModel)]="sauceAdd.price"  type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password2" placeholder="Цена" required="">
                     </div>
 
                     <div class="registration-button-block">
-                      <input type="submit" value="Добавить" class="button registration-button w-button">
+                      <input (click)="addSauce()" type="submit" value="Добавить" class="button registration-button w-button">
 
                     </div>
                   </div>
@@ -81,25 +81,29 @@
                 <div class="step01">
                   <div class="input-group">
                     <label>Ссылка на изображение</label>
-                    <input type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
+                    <input [(ngModel)]="pizzaAdd.urlImg"  type="text" class="field w-input" autocomplete="false" data-mask="phone" maxlength="60" name="loginString" placeholder="Url изображения" required="">
                   </div>
                   <div class="input-group">
                     <label>Название пиццы</label>
-                    <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+                    <input [(ngModel)]="pizzaAdd.name" type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+                  </div>
+                  <div class="input-group">
+                    <label>Цена</label>
+                    <input [(ngModel)]="pizzaAdd.price" type="text" class="field w-input" autocomplete="false" maxlength="60" name="price" placeholder="Цена" required="">
                   </div>
                   <div class="input-group">
                     <label>Описание</label>
-                    <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                    <input [(ngModel)]="pizzaAdd.description" type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
                   </div>
                   <div class="products">
                     <div class="product">
                       <table>
-                        <tr>
+                        <tr *ngFor="let item of ingredients">
                           <td>
-                            ингредиент
+                            {{item.name}}
                           </td>
                           <td>
-                            <input type="image"  src="../assets/image/cross1.png" >
+                            <input (click)="deleteIngredientForPizza(item)" type="image"  src="../assets/image/cross1.png" >
                           </td>
                         </tr>
                       </table>
@@ -113,21 +117,21 @@
                       <td class="t">
                   <div class="select_size">
                     <label>Ингредиенты</label>
-                    <select >
-                      <option>1</option>
+                    <select [(ngModel)]="select" name="first" >
+                      <option *ngFor="let item of data" [ngValue]="item">{{item.name}}</option>
                     </select>
                   </div>
                       </td>
                       <td class="t">
                   <div class="registration-button-block">
 
-                    <input type="submit" value="Добавить в список " class="button registration-button w-button add" width="100px">
+                    <input (click)="addIngredientForPizza()" type="submit" value="Добавить в список " class="button registration-button w-button add" width="100px">
                   </div>
                       </td>
                     </tr>
                   </table>
                   <div class="registration-button-block">
-                    <input type="submit" value="Добавить" class="button registration-button w-button ad">
+                    <input (click)="addPizza()" type="submit" value="Добавить" class="button registration-button w-button ad">
                   </div>
                 </div>
               </form>
@@ -145,23 +149,23 @@
                   <div class="step01">
                     <div class="input-group">
                       <label>Название ингредиента</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
+                      <input [(ngModel)]="ingredientAdd.name" type="text" class="field w-input" autocomplete="false" maxlength="60" name="email" placeholder="Название" required="">
                     </div>
                     <div class="input-group">
                       <label>Цена</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                      <input [(ngModel)]="ingredientAdd.price" type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Цена" required="">
                     </div>
                     <div class="input-group">
                       <label>Калорийность</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                      <input [(ngModel)]="ingredientAdd.caloricity" type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Калорийность" required="">
                     </div>
                     <div class="input-group">
                       <label>Вес</label>
-                      <input type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Описание" required="">
+                      <input [(ngModel)]="ingredientAdd.weight" type="text" class="field w-input" autocomplete="false" maxlength="16" minlength="6" name="password" placeholder="Вес" required="">
                     </div>
 
                     <div class="registration-button-block">
-                      <input type="submit" value="Добавить" class="button registration-button w-button">
+                      <input (click)="addIngredient()" type="submit" value="Добавить" class="button registration-button w-button">
 
                     </div>
                   </div>

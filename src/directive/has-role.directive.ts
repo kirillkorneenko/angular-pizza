@@ -7,13 +7,17 @@ export class HasRoleDirective implements OnInit{
 
   @Input() hasRole: Array<string>;
 
-
   constructor(private viewContainerRef: ViewContainerRef,
               private template: TemplateRef<any>) {
   }
 
   ngOnInit() {
-    this.checkRoles('user');
+      const user = JSON.parse(localStorage.getItem("user"));
+      if(user!=null){
+      this.checkRoles(user.roleByIdRole.name);
+      }
+      else{
+        this.checkRoles("user");}
   }
 
   checkRoles(userRole: string) {

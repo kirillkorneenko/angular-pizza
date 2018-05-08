@@ -6,27 +6,24 @@
     <table class="buttons">
       <tr>
         <td class="but"><input routerLink="/add_food" type="button" name="add" class="order" value="Добавление товаров"></td>
+
       </tr>
     </table>
       </tr>
       <tr>
     <table class="adm">
       <tr>
-        <!--<td rowspan="2" width="70">Номер заказа</td>-->
         <td rowspan="2" width="100">Номер телефона клиента</td>
         <td rowspan="2" width="150">Имя и фамилия клиента</td>
         <th colspan="3">Составляющие заказа</th>
         <td rowspan="2" width="70">Сумма<br> заказа</td>
         <td rowspan="2" width="50">Подтвердить<br> заказ и оплату </td>
-       <!-- <td rowspan="2" width="50">Оплатить<br> заказ</td>-->
       </tr>
       <tr>
         <th>Пицца</th>
         <th width="180">Напитки</th>
         <th>Соусы</th>
       </tr>
-      <!--<td></td>-->
-
       <tr *ngFor="let item of data">
         <td>{{item.userByIdClient.phone}}</td>
         <td>{{item.userByIdClient.name+ " " + item.userByIdClient.surname }}</td>
@@ -66,9 +63,6 @@
           </table>
         </td>
         </tr>
-
-
-      <!--<td></td>-->
     </table>
       </tr>
     </table>

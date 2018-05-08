@@ -24,12 +24,17 @@
         <li class="li1"><a routerLink="about-us" class="current">О нас</a></li>
         <li class="li2"><a routerLink="contacts" class="current">Контакты</a></li>
         <li class="li3"><a routerLink="/" class="current">Главная</a></li>
-        <li *hasRole="['admin','user']" class="li4"><a routerLink="admin" class="current">Администратор</a></li>
+        <li *hasRole="['admin']" class="li4"><a routerLink="admin" class="current">Администратор</a></li>
       </ul>
     </div>
       <div class="enter">
+        <div *ngIf="!isAut()">
         <img src="assets/image/clients.png" class="vhod">
         <a routerLink="enter" class="registration">Войти</a></div>
+      <div *ngIf="isAut()">
+        <img src="assets/image/clients.png" class="vhod">
+        <a routerLink="/" (click)="outUser()" class="registration">Выйти</a></div>
+      </div>
     </div>
   </header>
 </div>

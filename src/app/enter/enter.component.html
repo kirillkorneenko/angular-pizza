@@ -3,20 +3,38 @@
   <article>
 <div class="cartlist authorization">
   <div class="authorization-content">
+
+      <div *ngIf="!isRegist && !isAut">
     <div class="authorization-block">
+
+      <div *ngIf="flag">
       <div class="akcotitle">Авторизация</div>
+      </div>
+      <div *ngIf="!flag">
+        <h1 >Ошибка авторизации</h1>
+        <!--<img src="../../assets/image/arJI85yVLLs.jpg">-->
+      </div>
+
       <form id="authorization-form" class="form-pop-up-window">
         <div class="input-group">
           <label>Логин</label>
-          <input type="text" class="field w-input" maxlength="60" minlength="5" name="login" placeholder="Введите ваш логин" required="">
+          <input [(ngModel)]="userAuthorization.login" type="text" class="field w-input" maxlength="60" minlength="5" name="login" placeholder="Введите ваш логин" required="">
         </div>
         <div class="input-group">
           <label>Пароль</label>
-          <input type="password" class="field w-input" minlength="6" maxlength="60" name="password" placeholder="Пароль" required="">
+          <input [(ngModel)]="userAuthorization.password" type="password" class="field w-input" minlength="6" maxlength="60" name="password" placeholder="Пароль" required="">
         </div>
-        <input type="submit" id="authorization-button" value="Войти" class="button w-button">
+        <input (click)="authorization()" type="submit" id="authorization-button" value="Войти" class="button w-button">
         </form>
     </div>
+      </div>
+      <div *ngIf="isAut">
+        <div class="akcotitle">Авторизация прошла успешно</div>
+        <input routerLink="/pizza" type="submit"  value="Перейти к заказу" class="button w-button">
+      </div>
+
+
+    <div *ngIf="!isRegist && !isAut">
     <div class="registration-block">
       <div class="akcotitle">Регистрация</div>
       <form id="registration-form" class="form-pop-up-window button-registration">
@@ -61,6 +79,11 @@
           <input (click)="registration()" type="submit" value="Зарегистрироваться" class="button registration-button w-button">
         </div>
       </form>
+    </div>
+    </div>
+    <div *ngIf="isRegist">
+      <div class="akcotitle">Регистрация прошла успешно</div>
+      <input routerLink="/pizza" type="submit"  value="Перейти к заказу" class="button w-button">
     </div>
   </div>
 </div>
