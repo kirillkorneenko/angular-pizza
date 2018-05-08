@@ -115,7 +115,7 @@
   line-height: 24px;
   box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
 }
-input[type="submit"] {
+.ad {
   width: 100%;
   padding: 0;
   line-height: 42px;
@@ -124,7 +124,28 @@ input[type="submit"] {
   border-width: 0;
   color: white;
   font-size: 20px;
-  margin-bottom: 10px;
+
+}
+
+input[type="submit"]{
+  width: 100%;
+  padding: 0;
+  line-height: 42px;
+  background: #DEB887;
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.add{
+  font-size: 16px;
+  padding: 0;
+  line-height: 42px;
+  background: #DEB887;
+  border-radius: 10px;
+  border-width: 0;
+  color: white;
 }
 .input-group>label {
   display: block;
@@ -165,6 +186,18 @@ input[type="image"]{
 }
 
 td{
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.t{
+  width: 50%;
+  text-align: center;
   display: inline-block; /* Строчно-блочный элемент */
   vertical-align: top;
+}
+
+tr{
+  width: 100%;
 }
