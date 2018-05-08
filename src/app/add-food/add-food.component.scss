@@ -1,6 +1,12 @@
 .registration-block {
   font-size: 14px;
   line-height: 18px;
+  display: inline-block; /* Строчно-блочный элемент */
+  vertical-align: top;
+}
+.authorization-content{
+  display: inline-block; /* Строчно-блочный элемент */
+  vertical-align: top;
 }
 
 .akcotitle {
@@ -84,10 +90,13 @@
 .cartlist.authorization {
   padding: 20px 20px;
   background-size: 80%;
+  display: inline-block; /* Строчно-блочный элемент */
+  vertical-align: top;
 }
 
 .cartlist {
-  display: block;
+  display: inline-block; /* Строчно-блочный элемент */
+  vertical-align: top;
   margin: 10px 10px 30px;
   padding: 0 0px 30px;
   -webkit-box-pack: justify;
@@ -115,6 +124,7 @@ input[type="submit"] {
   border-width: 0;
   color: white;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 .input-group>label {
   display: block;
@@ -128,4 +138,33 @@ label {
   /*font-weight: bold;*/
   font-size: 18px;
   color: #A0522D;
+}
+select{
+  width: 180px;
+  border-radius: 10px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.products{
+  border:1px solid #A0522D;
+border-radius:10px;
+  text-align: left;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: inline-block; /* Строчно-блочный элемент */
+  vertical-align: top;
+}
+
+
+input[type="image"]{
+  position: relative;
+
+}
+
+td{
+  display: inline-block; /* Строчно-блочный элемент */
+  vertical-align: top;
 }
